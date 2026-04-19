@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>silva perfumes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <button id="btn-tema" class="btn-round" onclick="toggleTema()">🌙</button>
+        <div class="logo">Minha Loja</div>
+        <div class="carrinho-fixo-container">
+            <button class="btn-round" onclick="abrirFecharCarrinho()">
+                🛒<span id="contador-itens">0</span>
+            </button>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <h1>silva perfumes</h1>
+        <p>Os melhores sabonetes artesanais</p>
+        <p>Ribeirao Preto - SP</p>
+    </header>
+
+    <aside id="carrinho-lateral" class="carrinho-hidden">
+        <div class="carrinho-header">
+            <h3>🛒 Meu Carrinho</h3>
+            <button class="btn-fechar" onclick="abrirFecharCarrinho()">X</button>
+        </div>
+        <ul id="lista-carrinho"></ul>
+        <div class="carrinho-footer">
+            <p>Total: <strong>R$ <span id="valor-total">0,00</span></strong></p>
+            <button id="btn-finalizar" onclick="finalizarPedido()">Finalizar no WhatsApp</button>
+        </div>
+    </aside>
+
+    <main class="catalogo">
+        <article class="produto">
+            <img src="img/sabonete1.png" alt="Sabonete hidratante corporal" height="300px" width="300px">
+            <h2>Sabonete hidratante corporal artesanal</h2>
+            <p>caixa com 2 unidades</p>
+            <p>180g</p>
+            <p class="preco">R$ 15.00</p>
+            <button class="btn-add" onclick="adicionarAoCarrinho('Sabonete hidratante corporal', 15.00)">Adicionar</button>
+        </article>
+
+        <article class="produto">
+            <img src="img/sabonete2.png" alt="Sabonete mel e óleo" height="300px" width="300px">
+            <h2>Sabonete artesanal de 🍯 mel e óleo essências</h2>
+            <p>90g</p>
+            <p class="preco">1 unidade R$ 15.00 | 2 unidades R$ 25.00</p>
+            <button class="btn-add" onclick="adicionarAoCarrinho('sabonete hidratante mel e óleo', 15.00, true, 25.00)">Adicionar</button>
+        </article>
+
+        <article class="produto">
+            <img src="img/sabonete3.png" alt="Sabonete hidratante mel e óleo" height="300px" width="300px">
+            <h2>Sabonete artesanal hidratante 🍯 mel e óleo essências</h2>
+            <p>caixa com 2 unidades</p>
+            <p>60g</p>
+            <p class="preco">R$ 6.00</p>
+            <button class="btn-add" onclick="adicionarAoCarrinho('sabonete hidratante mel e óleo', 6.00)">Adicionar</button>
+        </article>
+
+        <article class="produto">
+            <img src="img/sabonete4.png" alt="Sabonete erva doce e oleos" height="300px" width="300px">
+            <h2>Sabonete artesanal de erva doce e oleos essencias</h2>
+            <p>1 unidade</p>
+            <p>70g</p>
+            <p class="preco">R$ 12.00</p>
+            <button class="btn-add" onclick="adicionarAoCarrinho('sabonete erva doce e oleos', 12.00)">Adicionar</button>
+        </article>
+
+        <article class="produto">
+            <img src="img/sabonete5.png" alt="Sabonete óleo de alecrim e erva doce" height="300px" width="300px">
+            <h2>Sabonete artesanal hidratante corporal de óleo de alecrim e erva 🌿 doce</h2>
+            <p>caixa com 2 unidades</p>
+            <p>60g</p>
+            <p class="preco">R$ 22.00</p>
+            <button class="btn-add" onclick="adicionarAoCarrinho('sabonete óleo de alecrim e erva doce', 22.00)">Adicionar</button>
+        </article>
+
+        <article class="produto">
+            <img src="img/sabonete6.png" alt="Sabonete morango" height="300px" width="300px">
+            <h2>Sabonete artesanal hidratante Morango 🍓 Sweet</h2>
+            <p>60g</p>
+            <p class="preco">1 unidade R$ 12.00 | 2 unidades R$ 22.00</p>
+            <button class="btn-add" onclick="adicionarAoCarrinho('sabonete de morango', 12.00, true, 22.00)">Adicionar</button>
+        </article>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
